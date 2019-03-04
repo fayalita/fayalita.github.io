@@ -15,6 +15,7 @@ const ProjectItem = (props: Props) => {
 
   const {
     title,
+    details,
     desc,
     images,
     bulletPoints,
@@ -37,11 +38,14 @@ const ProjectItem = (props: Props) => {
   );
 
   return (
-    <Col xs={12} md={6}>
+    <Col xs={12} md={6} style={{ margin: '25px 0px', fontSize: '18px' }}>
       {images.length > 0 ? imageContainer : null}
       <Container>
         <Row className={styles.title}>
           {title}
+        </Row>
+        <Row className={styles.details}>
+          {details}
         </Row>
       </Container>
       <br />

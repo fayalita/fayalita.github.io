@@ -15,7 +15,7 @@ const PresentationItem = (props: Props) => {
 
   return (
     <Container>
-      <Row style={{ fontSize: '28px', color: '#fff' }}>
+      <Row style={{ fontSize: '26px', color: '#fff' }}>
         <Col xs={8}>
           {title}
         </Col>

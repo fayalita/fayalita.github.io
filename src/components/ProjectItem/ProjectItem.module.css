@@ -4,3 +4,10 @@
   color: #fff !important;
   font-size: 28px !important;
 }
+
+.details {
+  text-align: center;
+  display: block !important;
+  color: #fff !important;
+  font-size: 22px !important;
+}

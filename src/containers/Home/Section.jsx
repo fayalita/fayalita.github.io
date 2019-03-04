@@ -21,8 +21,8 @@ const Section = React.forwardRef((props: Props, ref) => {
   return (
     <div className={theme} ref={ref}>
       <Container>
-        <Col md={{ span: 10, offset: 1 }}>
-          <div style={{ fontSize: '46px', textAlign: 'center' }}>
+        <Col md={{ span: 10, offset: 1 }} style={{ fontSize: '18px' }}>
+          <div style={{ fontSize: '46px', textAlign: 'center', justifyContent: 'center' }}>
             {title}
           </div>
           {text || null}

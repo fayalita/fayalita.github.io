@@ -1,7 +1,7 @@
 .title {
   color: #fff;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .title:hover {
@@ -31,13 +31,13 @@
 
 .aboutme {
   padding: 20px;
-  background-color: #193660;
+  background-color: #590057;
   color: #fff;
 }
 
 .contactme {
   padding: 20px;
-  background-color: #193660;
+  background-color: #590057;
   color: #fff;
   text-align: center;
 }
@@ -47,16 +47,18 @@
   display: flex;
   float: right;
   line-height: 20px;
+  color: #fff;
+  font-size: 18px;
 }
 
 .section {
-  background-color: #473f3f;
+  background-color: #3a2e4a;
   color: #fff;
 }
 
 .footer {
   padding: 10px;
-  background-color: #696969;
+  background-color: #1a1a1a;
   color: #fff;
 }
 

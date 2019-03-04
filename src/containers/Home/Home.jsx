@@ -38,52 +38,55 @@ const onDrawerSelect = (selectedKey) => {
 };
 
 const aridaData = {
-  title: 'Árida: Backlands Awakening (C#, Unity) - 2019',
+  title: 'Árida: Backlands Awakening',
+  details: '(C#, Unity) - 2019',
   desc: 'An adventure game focused on story with elements of exploration and survival, developed for PC.',
   bulletPoints: [
     'Dialogue, crafting and inventory systems',
     'Input handler',
     'A lot of UI like crafting and inventory menus, pause screen, HUD, settings, etc',
     'Optimization',
-	'Gameplay events through XML',
-	'Trees leaves shader',
-	'Player interaction with items',
-	'Sounds management',
+    'Gameplay events through XML',
+    'Trees leaves shader',
+    'Player interaction with items',
+    'Sounds management',
   ],
   images: [
     'arida.jpg',
     'arida-gif1.gif',
     'arida2.jpg',
-	'arida3.jpg',
-	'arida-gif2.gif',
+    'arida3.jpg',
+    'arida-gif2.gif',
   ],
   icon: 'steam.svg',
   url: 'https://store.steampowered.com/app/907760/Arida_Backlands_Awakening',
 };
 
 const guardioesData = {
-  title: 'Guardiões da Floresta Gamebook (C#, Unity) - 2016',
+  title: 'Guardiões da Floresta Gamebook',
+  details: '(C#, Unity) - 2016',
   desc: 'A hybrid  media  designed  for  children, mixing adventure, comics and puzzles. Developed for mobile.',
   bulletPoints: [
     'Character movement and animations',
     'Dialogue, crafting and inventory systems',
     'Quests',
     'Isometric depth sorting',
-	'Patrollers and stealth mechanic',
-	'Most of UI elements, except puzzles',
+    'Patrollers and stealth mechanic',
+    'Most of UI elements, except puzzles',
   ],
   images: [
     'guardioes1.jpg',
     'guardioes2.jpg',
     'guardioes3.jpg',
-	'guardioes6.jpg',
+    'guardioes6.jpg',
   ],
   icon: 'google-play.svg',
   url: 'https://play.google.com/store/apps/details?id=com.CV.GBookGuardioes',
 };
 
 const salvadorsimData = {
-  title: 'Salvador Sim (AS3, Flash) - 2013',
+  title: 'Salvador Sim',
+  details: '(AS3, Flash) - 2013',
   desc: 'A city builder and isometric game where the player must manage the city so it can be ready for the World Cup. Developed for PC.',
   bulletPoints: [
     'Load of levels from specified data, such as goals, textures, buildings, sound emitters, etc',
@@ -101,14 +104,15 @@ const salvadorsimData = {
 };
 
 const industrialiData = {
-  title: 'Industriali (AS3, Flash) - 2012',
+  title: 'Industriali',
+  details: '(AS3, Flash) - 2012',
   desc: 'A simulation and isometric game where the player must manage a city in England going through the Industrial Revolution. Developed for PC.',
   bulletPoints: [
     'Load of maps and constructions data',
     'Buildings\' productions, maintenance, costs and upgrades',
     'Tutorial and quests',
     'All UI',
-	'Editor mode for map creation',
+    'Editor mode for map creation',
   ],
   images: [
     'industriali3.jpg',
@@ -120,7 +124,8 @@ const industrialiData = {
 };
 
 const buziosData = {
-  title: 'Búzios: Ecos da Liberdade (AS3, Flash) - Internship - 2011',
+  title: 'Búzios: Ecos da Liberdade',
+  details: '(AS3, Flash) - Internship - 2011',
   desc: 'A 2D point and click adventure game about a revolt that occured in Brazil in 1798. Developed for PC.',
   bulletPoints: [
     'Test and fix bugs',
@@ -132,16 +137,17 @@ const buziosData = {
     'buzios.jpg',
     'buzios2.jpg',
     'buzios3.jpg',
-	'buzios4.jpg',
-	'buzios5.jpg',
-	'buzios6.jpg',
+    'buzios4.jpg',
+    'buzios5.jpg',
+    'buzios6.jpg',
   ],
   icon: 'web.svg',
   url: 'http://www.comunidadesvirtuais.pro.br/buzios/downloads/#gold',
 };
 
 const summonekoData = {
-  title: 'SummoNeko (C#, Unity) - 2016',
+  title: 'SummoNeko',
+  details: '(C#, Unity) - 2016',
   desc: 'SummoNeko is a 2d game where a cat try to invoke the devil to make your wishes come true. The player must use the keyboard to complete a correct sequence of moves before the human finds out what\'s happening. This game was made in the Global Game Jam of 2016. I\'ve participated in the design.',
   bulletPoints: [],
   images: [
@@ -154,12 +160,13 @@ const summonekoData = {
 };
 
 const fistfulData = {
-  title: 'A Fistful of Feathers (C++) - 2013',
+  title: 'A Fistful of Feathers',
+  details: '(C++) - 2013',
   desc: 'Infinite runner game, 2D platformer, in which the player controls a cowboy riding an ostrich in an old west environment. Developed for mobile. This game was developed while I was studying for a year in Kajaani University of Applied Sciences, during one of the courses. I\'ve participated in the design and the audio programming.',
   bulletPoints: [],
   images: [
     'fistful.jpg',
-	'fistful-gif.gif',
+    'fistful-gif.gif',
   ],
   icon: 'google-play.svg',
   url: 'https://play.google.com/store/apps/details?id=com.TeamRiver.FistfulOfFeathers&hl=en',
@@ -223,47 +230,46 @@ class Home extends Component {
   render() {
     const { width, drawerOpen } = this.state;
     const isMobile = width <= 500;
-    const aboutMe = `Hi there! (ﾉ･ω･)ﾉﾞ I'm Laiza Camurugy and I've been passionately developing games since 2009. I graduated in Computer Science from UFBA, which gave me a great mathematical and logical basis, as well as good programming skills.
-	
-	I started in this career as an intern during the development process of a 2D adventure game shipped by Comunidades Virtuais. Since then, I've developed as a part of the team an amount of 4 games (3 for PC, 1 for mobile), using AS3 and C# as programming languages, Flash and Unity as technologies. Later on, I spent a year studying Game Development at Kajaani University of Applied Sciences, learning the development process using C++. Thereafter, I've participated developing Árida: Backlands Awakening at Aoca Game Lab from 2016 to the beginning of 2019.
-	
-	I like game dev because besides working with code and math, I can be in touch with areas that I've always admired, like music, art and narrative. Beyond that, the most obvious motive is that I love playing games! It was love at first sight, when my father bought a megadrive with the Sonic tape together.`;
+    const aboutMe1 = 'Hi there! (ﾉ･ω･)ﾉﾞ I\'m Laiza Camurugy and I\'ve been passionately developing games since 2009. I graduated in Computer Science from UFBA, which gave me a great mathematical and logical basis, as well as good programming skills.';
+
+    const aboutMe2 = 'I started in this career as an intern during the development process of a 2D adventure game shipped by Comunidades Virtuais. Since then, I\'ve developed as a part of the team an amount of 4 games (3 for PC, 1 for mobile), using AS3 and C# as programming languages, Flash and Unity as technologies. Later on, I spent a year studying Game Development at Kajaani University of Applied Sciences, learning the development process using C++. Thereafter, I\'ve participated developing Árida: Backlands Awakening at Aoca Game Lab from 2016 to the beginning of 2019.';
+    const aboutMe3 = 'I like game dev because besides working with code and math, I can be in touch with areas that I\'ve always admired, like music, art and narrative. Beyond that, the most obvious motive is that I love playing games! It was love at first sight, when my father bought a megadrive with the Sonic tape together ❤.';
 
     const navLinks = (
       <Navbar.Collapse id="responsive-navbar-nav" style={{ marginTop: '8px' }}>
         <Nav className="mr-auto" onSelect={onSelect}>
           <Nav.Link href="#aboutme">
-            <MaterialIcon icon="face" size={20} />
+            <MaterialIcon icon="face" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               About me
             </span>
           </Nav.Link>
           <Nav.Link href="#professional">
-            <MaterialIcon icon="work" size={20} />
+            <MaterialIcon icon="work" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Professional projects
             </span>
           </Nav.Link>
           <Nav.Link href="#side">
-            <MaterialIcon icon="games" size={20} />
+            <MaterialIcon icon="games" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Side projects
             </span>
           </Nav.Link>
           <Nav.Link href="#presentation">
-            <MaterialIcon icon="record_voice_over" size={20} />
+            <MaterialIcon icon="record_voice_over" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Presentations
             </span>
           </Nav.Link>
           <Nav.Link href="Emmanuel_Argollo_CV.pdf" target="_blank">
-            <MaterialIcon icon="attach_file" size={20} />
+            <MaterialIcon icon="attach_file" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Résumé
             </span>
           </Nav.Link>
           <Nav.Link href="#contactme">
-            <MaterialIcon icon="question_answer" size={20} />
+            <MaterialIcon icon="question_answer" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Contact Me
             </span>
@@ -342,7 +348,7 @@ class Home extends Component {
           <Navbar.Brand>
             <Link to="/">
               <span className={styles.title}>
-                {'Fay\'s portfolio'}
+                {'Laiza Camurugy'}
               </span>
             </Link>
           </Navbar.Brand>
@@ -352,9 +358,16 @@ class Home extends Component {
         <Element name="#aboutme" className="element">
           <Section
             title="About Me"
-            text={aboutMe}
             theme={styles.aboutme}
-          />
+          >
+            {aboutMe1}
+            <br />
+            <br />
+            {aboutMe2}
+            <br />
+            <br />
+            {aboutMe3}
+          </Section>
         </Element>
         <Element name="#professional" className="element">
           <Section
@@ -403,7 +416,7 @@ class Home extends Component {
             {', I\'ll try to respond as quick as I can! I\'m also on this social media thing, if you need me there:'}
             <br />
             <br />
-            <Row>
+            <Row style={{ justifyContent: 'center' }}>
               <a href="https://twitter.com/lcamurugy" target="_blank" rel="noopener noreferrer">
                 <img src="twitter.svg" alt="twitter" style={{ width: '50px', margin: '0px 10px' }} />
               </a>
@@ -421,9 +434,15 @@ class Home extends Component {
         </Element>
         <div style={{ height: '50px' }} />
         <Section
-          text="This will be the footer"
           theme={styles.footer}
-        />
+        >
+          <div style={{ justifyContent: 'center', textAlign: 'center' }}>
+            Layout by
+            <a href="https://www.linkedin.com/in/emmanuel-argollo/" style={{ color: '#fff' }}>
+              {' Emmanuel Argollo'}
+            </a>
+          </div>
+        </Section>
       </div>
     );
   }
