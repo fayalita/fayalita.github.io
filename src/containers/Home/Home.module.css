@@ -1,0 +1,61 @@
+.title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.title:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:active  {
+  color: #fff;
+  text-decoration: none;
+}
+
+.aboutme {
+  padding: 20px;
+  background-color: #193660;
+  color: #fff;
+}
+
+.contactme {
+  padding: 20px;
+  background-color: #193660;
+  color: #fff;
+  text-align: center;
+}
+
+.navitem {
+  margin: 0px 5px;
+  display: flex;
+  float: right;
+  line-height: 20px;
+}
+
+.section {
+  background-color: #473f3f;
+  color: #fff;
+}
+
+.footer {
+  padding: 10px;
+  background-color: #696969;
+  color: #fff;
+}

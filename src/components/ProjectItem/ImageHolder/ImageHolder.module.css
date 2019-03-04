@@ -1,0 +1,17 @@
+.projectThumbnail {
+  border-radius: 15px;
+}
+
+.thumbHolder {
+  height: 360px;
+  border-radius: 15px;
+  border: 1px solid #999;
+}
+
+.downloadIcon {
+  position: absolute;
+  bottom: 10px;
+  right: 24px;
+  width: 50px;
+  z-index: 2;
+}
