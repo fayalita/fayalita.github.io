@@ -37,33 +37,145 @@ const onDrawerSelect = (selectedKey) => {
   });
 };
 
-const projectData = {
-  title: 'Project A (Unity)',
-  desc: 'This is a mock description',
+const aridaData = {
+  title: 'Árida: Backlands Awakening (C#, Unity) - 2019',
+  desc: 'An adventure game focused on story with elements of exploration and survival, developed for PC.',
   bulletPoints: [
-    'Test point',
-    'Test point',
-    'Test point',
-    'Test point',
+    'Dialogue, crafting and inventory systems',
+    'Input handler',
+    'A lot of UI like crafting and inventory menus, pause screen, HUD, settings, etc',
+    'Optimization',
+	'Gameplay events through XML',
+	'Trees leaves shader',
+	'Player interaction with items',
+	'Sounds management',
   ],
   images: [
-    'guardioes.gif',
-    'test.jpg',
-    'test.jpg',
+    'arida.jpg',
+    'arida-gif1.gif',
+    'arida2.jpg',
+	'arida3.jpg',
+	'arida-gif2.gif',
   ],
   icon: 'steam.svg',
   url: 'https://store.steampowered.com/app/907760/Arida_Backlands_Awakening',
 };
 
+const guardioesData = {
+  title: 'Guardiões da Floresta Gamebook (C#, Unity) - 2016',
+  desc: 'A hybrid  media  designed  for  children, mixing adventure, comics and puzzles. Developed for mobile.',
+  bulletPoints: [
+    'Character movement and animations',
+    'Dialogue, crafting and inventory systems',
+    'Quests',
+    'Isometric depth sorting',
+	'Patrollers and stealth mechanic',
+	'Most of UI elements, except puzzles',
+  ],
+  images: [
+    'guardioes1.jpg',
+    'guardioes2.jpg',
+    'guardioes3.jpg',
+	'guardioes6.jpg',
+  ],
+  icon: 'google-play.svg',
+  url: 'https://play.google.com/store/apps/details?id=com.CV.GBookGuardioes',
+};
+
+const salvadorsimData = {
+  title: 'Salvador Sim (AS3, Flash) - 2013',
+  desc: 'A city builder and isometric game where the player must manage the city so it can be ready for the World Cup. Developed for PC.',
+  bulletPoints: [
+    'Load of levels from specified data, such as goals, textures, buildings, sound emitters, etc',
+    'Buildings mechanics',
+    'City stats management and player experience points',
+    'Some of the UI',
+  ],
+  images: [
+    'salvadorsim3.jpg',
+    'salvadorsim2.jpg',
+    'salvadorsim.jpg',
+  ],
+  icon: 'web.svg',
+  url: 'http://comunidadesvirtuais.pro.br/cv/games/#9',
+};
+
+const industrialiData = {
+  title: 'Industriali (AS3, Flash) - 2012',
+  desc: 'A simulation and isometric game where the player must manage a city in England going through the Industrial Revolution. Developed for PC.',
+  bulletPoints: [
+    'Load of maps and constructions data',
+    'Buildings\' productions, maintenance, costs and upgrades',
+    'Tutorial and quests',
+    'All UI',
+	'Editor mode for map creation',
+  ],
+  images: [
+    'industriali3.jpg',
+    'industriali2.jpg',
+    'industriali.jpg',
+  ],
+  icon: 'web.svg',
+  url: 'http://comunidadesvirtuais.pro.br/cv/games/#6',
+};
+
+const buziosData = {
+  title: 'Búzios: Ecos da Liberdade (AS3, Flash) - Internship - 2011',
+  desc: 'A 2D point and click adventure game about a revolt that occured in Brazil in 1798. Developed for PC.',
+  bulletPoints: [
+    'Test and fix bugs',
+    'Created XML files for scenes, characters and items',
+    'Save and load',
+    'Some of the UI',
+  ],
+  images: [
+    'buzios.jpg',
+    'buzios2.jpg',
+    'buzios3.jpg',
+	'buzios4.jpg',
+	'buzios5.jpg',
+	'buzios6.jpg',
+  ],
+  icon: 'web.svg',
+  url: 'http://www.comunidadesvirtuais.pro.br/buzios/downloads/#gold',
+};
+
+const summonekoData = {
+  title: 'SummoNeko (C#, Unity) - 2016',
+  desc: 'SummoNeko is a 2d game where a cat try to invoke the devil to make your wishes come true. The player must use the keyboard to complete a correct sequence of moves before the human finds out what\'s happening. This game was made in the Global Game Jam of 2016. I\'ve participated in the design.',
+  bulletPoints: [],
+  images: [
+    'summoneko1.jpg',
+    'summoneko2.jpg',
+    'summoneko3.jpg',
+  ],
+  icon: 'web.svg',
+  url: 'https://globalgamejam.org/2016/games/summoneko',
+};
+
+const fistfulData = {
+  title: 'A Fistful of Feathers (C++) - 2013',
+  desc: 'Infinite runner game, 2D platformer, in which the player controls a cowboy riding an ostrich in an old west environment. Developed for mobile. This game was developed while I was studying for a year in Kajaani University of Applied Sciences, during one of the courses. I\'ve participated in the design and the audio programming.',
+  bulletPoints: [],
+  images: [
+    'fistful.jpg',
+	'fistful-gif.gif',
+  ],
+  icon: 'google-play.svg',
+  url: 'https://play.google.com/store/apps/details?id=com.TeamRiver.FistfulOfFeathers&hl=en',
+};
+
 const professionalProjects = [
-  projectData,
-  projectData,
-  projectData,
+  aridaData,
+  guardioesData,
+  salvadorsimData,
+  industrialiData,
+  buziosData,
 ];
 
 const sideProjects = [
-  projectData,
-  projectData,
+  summonekoData,
+  fistfulData,
 ];
 
 const presentationData = [
@@ -111,7 +223,11 @@ class Home extends Component {
   render() {
     const { width, drawerOpen } = this.state;
     const isMobile = width <= 500;
-    const aboutMe = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec ullamcorper magna. Etiam luctus ultrices massa, id pretium mi fringilla eget. Duis volutpat turpis vel quam blandit blandit. Vestibulum placerat, ante nec dapibus vestibulum, neque lorem tristique mi, et consectetur ex leo vitae elit. Mauris sagittis ornare mauris sit amet ornare. Cras viverra cursus sodales. Sed condimentum rutrum erat, quis cursus sapien maximus sit amet. Nullam pharetra mattis fermentum. Sed tincidunt nec arcu at mollis. Fusce sed gravida lectus, vitae pellentesque enim. Integer quis augue sed ex accumsan porta sit amet vitae justo. Duis purus quam, malesuada sit amet vulputate sed, bibendum pretium lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.';
+    const aboutMe = `Hi there! (ﾉ･ω･)ﾉﾞ I'm Laiza Camurugy and I've been passionately developing games since 2009. I graduated in Computer Science from UFBA, which gave me a great mathematical and logical basis, as well as good programming skills.
+	
+	I started in this career as an intern during the development process of a 2D adventure game shipped by Comunidades Virtuais. Since then, I've developed as a part of the team an amount of 4 games (3 for PC, 1 for mobile), using AS3 and C# as programming languages, Flash and Unity as technologies. Later on, I spent a year studying Game Development at Kajaani University of Applied Sciences, learning the development process using C++. Thereafter, I've participated developing Árida: Backlands Awakening at Aoca Game Lab from 2016 to the beginning of 2019.
+	
+	I like game dev because besides working with code and math, I can be in touch with areas that I've always admired, like music, art and narrative. Beyond that, the most obvious motive is that I love playing games! It was love at first sight, when my father bought a megadrive with the Sonic tape together.`;
 
     const navLinks = (
       <Navbar.Collapse id="responsive-navbar-nav" style={{ marginTop: '8px' }}>
