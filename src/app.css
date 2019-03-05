@@ -1,0 +1,15 @@
+a{
+  text-decoration: none !important;
+}
+
+@font-face {
+   font-family: 'Brela';
+   font-style: normal;
+   font-weight: 400;
+   src: url('./fonts/CovesLight.otf');
+}
+
+body {
+  background-color: #1c092a;
+  font-family: 'Brela';
+}
