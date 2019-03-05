@@ -9,7 +9,6 @@ import { Element, scroller } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'material-icons-react';
 import ProjectItem from '../../components/ProjectItem/ProjectItem';
-import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import PresentationItem from '../../components/PresentationItem/PresentationItem';
 import Section from './Section';
 import styles from './Home.module.css';
@@ -22,17 +21,6 @@ const onSelect = (selectedKey) => {
     duration: 1000,
     delay: 100,
     smooth: true,
-    offset: -80, // Scrolls to element + 50 pixels down the page
-  });
-};
-
-const onDrawerSelect = (selectedKey) => {
-  if (selectedKey === '#resume') {
-    return;
-  }
-  scroller.scrollTo(selectedKey, {
-    duration: 0,
-    delay: 0,
     offset: -80, // Scrolls to element + 50 pixels down the page
   });
 };
@@ -203,7 +191,6 @@ class Home extends Component {
     super();
     this.state = {
       width: window.innerWidth,
-      drawerOpen: false,
     };
   }
 
@@ -219,16 +206,8 @@ class Home extends Component {
     this.setState({ width: window.innerWidth });
   };
 
-  handleOpenDrawer = () => {
-    this.setState({ drawerOpen: true });
-  }
-
-  handleCloseDrawer = () => {
-    this.setState({ drawerOpen: false });
-  }
-
   render() {
-    const { width, drawerOpen } = this.state;
+    const { width } = this.state;
     const isMobile = width <= 500;
     const aboutMe1 = 'Hi there! (ﾉ･ω･)ﾉﾞ I\'m Laiza Camurugy and I\'ve been passionately developing games since 2009. I graduated in Computer Science from UFBA, which gave me a great mathematical and logical basis, as well as good programming skills.';
 
@@ -276,54 +255,6 @@ class Home extends Component {
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
-    );
-
-    const sideNav = (
-      <div className={styles.menuWraper}>
-        <div style={{ cursor: 'pointer' }} onClick={this.handleOpenDrawer} role="none" onKeyDown={() => {}}>
-          <MaterialIcon icon="menu" size={42} color="#fff" />
-        </div>
-        <SideDrawer open={drawerOpen}>
-          <Nav className="flex-column" onSelect={onDrawerSelect}>
-            <Nav.Link href="#aboutme" onClick={this.handleOpenDrawer}>
-              <MaterialIcon icon="face" size={20} />
-              <span className={styles.navitem}>
-                About me
-              </span>
-            </Nav.Link>
-            <Nav.Link href="#professional">
-              <MaterialIcon icon="work" size={20} />
-              <span className={styles.navitem}>
-                Professional projects
-              </span>
-            </Nav.Link>
-            <Nav.Link href="#side">
-              <MaterialIcon icon="games" size={20} />
-              <span className={styles.navitem}>
-                Side projects
-              </span>
-            </Nav.Link>
-            <Nav.Link href="#presentation">
-              <MaterialIcon icon="record_voice_over" size={20} />
-              <span className={styles.navitem}>
-                Presentations
-              </span>
-            </Nav.Link>
-            <Nav.Link href="Emmanuel_Argollo_CV.pdf" target="_blank">
-              <MaterialIcon icon="attach_file" size={20} />
-              <span className={styles.navitem}>
-                Résumé
-              </span>
-            </Nav.Link>
-            <Nav.Link href="#contactme">
-              <MaterialIcon icon="question_answer" size={20} />
-              <span className={styles.navitem}>
-                Contact Me
-              </span>
-            </Nav.Link>
-          </Nav>
-        </SideDrawer>
-      </div>
     );
 
     const presentationContent = presentationData.map(presentation => (
@@ -438,7 +369,7 @@ class Home extends Component {
         >
           <div style={{ justifyContent: 'center', textAlign: 'center' }}>
             Layout by
-            <a href="https://www.linkedin.com/in/emmanuel-argollo/"  target="_blank" style={{ color: '#fff' }}>
+            <a href="https://www.linkedin.com/in/emmanuel-argollo/" without rel="noopener noreferrer" target="_blank" style={{ color: '#fff' }}>
               {' Emmanuel Argollo'}
             </a>
           </div>
