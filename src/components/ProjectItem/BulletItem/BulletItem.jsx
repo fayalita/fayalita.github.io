@@ -11,7 +11,7 @@ const BulletItem = (props: Props) => {
 
   return (
     <div style={{ margin: '10px 0px' }}>
-      <MaterialIcon icon="done" color="#fff" size={16} />
+      <MaterialIcon icon="play_arrow" color="#fff" size={16} />
       <span className={styles.bulletText}>
         {content}
       </span>

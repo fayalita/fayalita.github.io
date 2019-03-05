@@ -84,28 +84,9 @@ const guardioesData = {
   url: 'https://play.google.com/store/apps/details?id=com.CV.GBookGuardioes',
 };
 
-const salvadorsimData = {
-  title: 'Salvador Sim',
-  details: '(AS3, Flash) - 2013',
-  desc: 'A city builder and isometric game where the player must manage the city so it can be ready for the World Cup. Developed for PC.',
-  bulletPoints: [
-    'Load of levels from specified data, such as goals, textures, buildings, sound emitters, etc',
-    'Buildings mechanics',
-    'City stats management and player experience points',
-    'Some of the UI',
-  ],
-  images: [
-    'salvadorsim3.jpg',
-    'salvadorsim2.jpg',
-    'salvadorsim.jpg',
-  ],
-  icon: 'web.svg',
-  url: 'http://comunidadesvirtuais.pro.br/cv/games/#9',
-};
-
 const industrialiData = {
   title: 'Industriali',
-  details: '(AS3, Flash) - 2012',
+  details: '(AS3, Flash) - 2013',
   desc: 'A simulation and isometric game where the player must manage a city in England going through the Industrial Revolution. Developed for PC.',
   bulletPoints: [
     'Load of maps and constructions data',
@@ -123,9 +104,28 @@ const industrialiData = {
   url: 'http://comunidadesvirtuais.pro.br/cv/games/#6',
 };
 
+const salvadorsimData = {
+  title: 'Salvador Sim',
+  details: '(AS3, Flash) - Internship - 2011',
+  desc: 'A city builder and isometric game where the player must manage the city so it can be ready for the World Cup. Developed for PC.',
+  bulletPoints: [
+    'Load of levels from specified data, such as goals, textures, buildings, sound emitters, etc',
+    'Buildings mechanics',
+    'City stats management and player experience points',
+    'Some of the UI',
+  ],
+  images: [
+    'salvadorsim3.jpg',
+    'salvadorsim2.jpg',
+    'salvadorsim.jpg',
+  ],
+  icon: 'web.svg',
+  url: 'http://comunidadesvirtuais.pro.br/cv/games/#9',
+};
+
 const buziosData = {
   title: 'Búzios: Ecos da Liberdade',
-  details: '(AS3, Flash) - Internship - 2011',
+  details: '(AS3, Flash) - Internship - 2010',
   desc: 'A 2D point and click adventure game about a revolt that occured in Brazil in 1798. Developed for PC.',
   bulletPoints: [
     'Test and fix bugs',
@@ -175,8 +175,8 @@ const fistfulData = {
 const professionalProjects = [
   aridaData,
   guardioesData,
-  salvadorsimData,
   industrialiData,
+  salvadorsimData,
   buziosData,
 ];
 
@@ -262,7 +262,7 @@ class Home extends Component {
               Presentations
             </span>
           </Nav.Link>
-          <Nav.Link href="Emmanuel_Argollo_CV.pdf" target="_blank">
+          <Nav.Link href="Laiza_Camurugy_CV.pdf" target="_blank">
             <MaterialIcon icon="attach_file" size={20} color="#ffffff" />
             <span className={styles.navitem}>
               Résumé
@@ -409,11 +409,11 @@ class Home extends Component {
             title="Contact Me"
             theme={styles.contactme}
           >
-            {'Feel free to send me a message here: '}
+            {'In case you want to talk about game development and the mystery of the universe, please reach me at '}
             <a href="mailto:laiza.camurugy@gmail.com">
               laiza.camurugy@gmail.com
             </a>
-            {', I\'ll try to respond as quick as I can! I\'m also on this social media thing, if you need me there:'}
+            {'.'}
             <br />
             <br />
             <Row style={{ justifyContent: 'center' }}>
@@ -438,7 +438,7 @@ class Home extends Component {
         >
           <div style={{ justifyContent: 'center', textAlign: 'center' }}>
             Layout by
-            <a href="https://www.linkedin.com/in/emmanuel-argollo/" style={{ color: '#fff' }}>
+            <a href="https://www.linkedin.com/in/emmanuel-argollo/"  target="_blank" style={{ color: '#fff' }}>
               {' Emmanuel Argollo'}
             </a>
           </div>
